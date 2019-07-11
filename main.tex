@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{enumitem}
+
+
+
+% \author{ROHAN DEEPAK PASPALLU}
+% \date{July 2019}
+
+\begin{document}
+\noindent
+\Large\textbf{PROBLEM-1}\hfill\textbf{ROHAN DEEPAK PASPALLU}\\
+\textbf{Topic: $B(x,y)$}\hfill\textbf{40093648}
+
+\section{Introduction}
+    $B(x,y)$ denotes the beta function also known as the Euler’s beta function.
+    Beta function is a function which is defined for the values defined in a certain specific limits of a function.
+    The formula of \textbf{$B(x,y)$} is:
+    \begin{itemize}
+        \item $B(x,y) = \frac{(x-1)! (y-1)!}{(x+y-1)!}$ \textbf{For positive integers}\cite{wiki}
+        \item $B(x,y)$ = $\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt$ \textbf{For positive real numbers}
+    \end{itemize}
+
+\section{Properties of Beta Function}
+    \begin{itemize}[noitemsep]
+        \item Beta function is symmetric: $B(x,y) = B(y,x)$
+        \item Beta function in terms of Gamma functions as:
+            $B(x,y)=\frac{\Gamma x \Gamma y}{\Gamma (x+y)}$
+        \item When x and y are postitive then it follows the form of gamma function.
+        \item There can me multiple parameters in the beta function (i.e. not necessarily x and y).
+    \end{itemize}
+    
+\section{Domain and Co-Domain}
+\begin{itemize}[noitemsep]
+   \item The domain of the Beta function depends on the limits of the integral function, having a higher limit as well as a lower limit during which the required output of a given function can be obtained.
+   \item The co-domain of a function depends on the domains. Here we have to manipulate the co-domains in the predefined form by solving the given problem and converting it into a beta function which can be executed only in some particular domain. Various examples of co-domains are:
+    \begin{itemize}
+        \item $B(x,y)$ = $\int_{0}^{\frac{\pi}{2}} (\sin \theta)^{2x-1} (\cos \theta)^{2x-1}$
+        \item $B(x,y)$ = $\int_{0}^{\infty} \frac{t^{x-1}}{(1+t)^{x+y}} dt$
+    \end{itemize}
+    \end{itemize}
+\begin{thebibliography}{9}
+\bibitem{wiki}
+% https://en.wikipedia.org/wiki/Beta_function
+\url{https://en.wikipedia.org/wiki/Beta\_function}
+\end{thebibliography}
+    
+    
+\end{document}
