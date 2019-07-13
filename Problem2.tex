@@ -1,0 +1,124 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+
+
+
+% \author{ROHAN DEEPAK PASPALLU}
+% \date{July 2019}
+
+\begin{document}
+\noindent
+\Large\textbf{PROBLEM-2}\hfill\textbf{ROHAN DEEPAK PASPALLU}\\
+\textbf{Topic: $B(x,y)$}\hfill\textbf{40093648}
+\section*{Requirements}
+    \begin{enumerate}[noitemsep]
+        \item \textbf{First Requirement}
+        \begin{itemize}[noitemsep]
+            \item \textbf{ID = } FR1
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The function requires two variable inputs x and y to perform the functionality on them.
+            \item\textbf{Rationalle = } $x$ and $y$ 
+        \end{itemize}
+        \newline
+        \item \textbf{Second Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR2
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The function requires the two variables to have a domain of R+ (i.e. positive real numbers).
+            \item\textbf{Rationalle = } $x>=0$ and $y>=0$ 
+        \end{itemize}
+        \newline
+        \item \textbf{Third Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR3
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The output of the requirement is also in R+
+            \item\textbf{Rationalle = } $B(x,y)>=0$ 
+        \end{itemize}
+        
+        \newpage
+        \item \textbf{Fourth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR4
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } If the values are positive integers Z+ (including zero) the values do not have any issue. As, we can use gamma function to calculate B(x,y).
+            \item\textbf{Rationalle = } \{ \forall x,y \in Z^+ \mid $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ \}
+        \end{itemize}
+        
+         \newline
+        \item \textbf{Fifth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR5
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Difficult
+            \item\textbf{Description = } But, if the values are real numbers then we have to perform integration according to the specific function which needs to be mentioned to calculate that. Here, there is a compulsion for a function to be present.
+            \item\textbf{Rationalle = } \{ \forall x,y \in $R^+$ \mid $B(x,y)$=$\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt$ \}
+        \end{itemize}
+        
+        \newline
+        \item \textbf{Sixth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR6
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The range of positive real variables is declared between the range of  0 to 1.
+            \item\textbf{Rationalle = } \{ \forall x,y \in [0,1] \mid $B(x,y)$=$\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt$ \} 
+        \end{itemize}
+        
+        \newpage
+        \item \textbf{Seventh Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR7
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Difficult
+            \item\textbf{Description = } If we want to include negative values we can do that by including Image of a specific negative number.
+            \item\textbf{Rationalle = } $x<0$ and $y<0$
+        \end{itemize}
+        
+        \newline
+        \item \textbf{Eighth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR8
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } There should be no other inputs other than the numeric values.
+            \item\textbf{Rationalle = } x,y \in $R^+$
+        \end{itemize}
+        
+        \newline
+        \item \textbf{Ninth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR9
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The two input variables can have similar as well as distinct values.
+            \item\textbf{Rationalle = } $x=y$ or $x\neq y$
+        \end{itemize}
+    \end{enumerate}
+\section*{Assumptions}
+    \begin{enumerate}[noitemsep]
+        \item x and y are positive real numbers x,y \in $R^+$
+        \item For x,y \in $Z^+$ its easier to compute $B(x,y)$
+        \item There is no requirement for functions to calculate $B(x,y)$.
+        \item There is no requirement to calculte the integral function in case of Real values of x and y.
+    \end{enumerate}
+    
+\end{document}
