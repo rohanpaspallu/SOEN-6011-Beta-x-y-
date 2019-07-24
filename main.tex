@@ -1,8 +1,23 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage{fullpage}
 \usepackage{enumitem}
-
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{url}
+ 
 
 
 % \author{ROHAN DEEPAK PASPALLU}
@@ -13,7 +28,7 @@
 \Large\textbf{PROBLEM-1}\hfill\textbf{ROHAN DEEPAK PASPALLU}\\
 \textbf{Topic: $B(x,y)$}\hfill\textbf{40093648}
 
-\section{Introduction}
+\section*{Introduction}
     $B(x,y)$ denotes the beta function also known as the Euler’s beta function.
     Beta function is a function which is defined for the values defined in a certain specific limits of a function.
     The formula of \textbf{$B(x,y)$} is:
@@ -22,7 +37,7 @@
         \item $B(x,y)$ = $\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt$ \textbf{For positive real numbers}
     \end{itemize}
 
-\section{Properties of Beta Function}
+\section*{Properties of Beta Function}
     \begin{itemize}[noitemsep]
         \item Beta function is symmetric: $B(x,y) = B(y,x)$
         \item Beta function in terms of Gamma functions as:
@@ -31,7 +46,7 @@
         \item There can me multiple parameters in the beta function (i.e. not necessarily x and y).
     \end{itemize}
     
-\section{Domain and Co-Domain}
+\section*{Domain and Co-Domain}
 \begin{itemize}[noitemsep]
    \item The domain of the Beta function depends on the limits of the integral function, having a higher limit as well as a lower limit during which the required output of a given function can be obtained.
    \item The co-domain of a function depends on the domains. Here we have to manipulate the co-domains in the predefined form by solving the given problem and converting it into a beta function which can be executed only in some particular domain. Various examples of co-domains are:
@@ -40,10 +55,263 @@
         \item $B(x,y)$ = $\int_{0}^{\infty} \frac{t^{x-1}}{(1+t)^{x+y}} dt$
     \end{itemize}
     \end{itemize}
+\newpage    
+
+\Large\textbf{PROBLEM-2}\hfill\textbf{ROHAN DEEPAK PASPALLU}\\
+\textbf{Topic: $B(x,y)$}\hfill\textbf{40093648}
+    \section*{Requirements}
+    \begin{enumerate}[noitemsep]
+        \item \textbf{First Requirement}
+        \begin{itemize}[noitemsep]
+            \item \textbf{ID = } FR1
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The function requires two variable inputs x and y to perform the functionality on them.
+            \item\textbf{Rationale = } $x$ and $y$ 
+        \end{itemize}
+
+        \item \textbf{Second Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR2
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The function requires the two variables to have a domain of R+ (i.e. positive real numbers).
+            \item\textbf{Rationale = } $x>=0$ and $y>=0$ 
+        \end{itemize}
+        \item \textbf{Third Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR3
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The output of the requirement is also in R+
+            \item\textbf{Rationale = } $B(x,y)>=0$ 
+        \end{itemize}
+        
+        \newpage
+        \item \textbf{Fourth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR4
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } If the values are positive integers Z+ (including zero) the values do not have any issue. As, we can use gamma function to calculate B(x,y).
+            \item\textbf{Rationale = } $\{ \forall x,y \in Z^+ \mid$ $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ \}
+        \end{itemize}
+        
+        \item \textbf{Fifth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR5
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Difficult
+            \item\textbf{Description = } But, if the values are real numbers then we have to perform integration according to the specific function which needs to be mentioned to calculate that. Here, there is a compulsion for a function to be present.
+            \item\textbf{Rationale = } $\{ \forall x,y \in $$R^+$ $\mid$ $B(x,y)$=$\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt\}$
+        \end{itemize}
+        
+        \item \textbf{Sixth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR6
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The range of positive real variables is declared between the range of  0 to 1.
+            \item\textbf{Rationale = } $\{ \forall x,y \in [0,1] \mid$ $B(x,y)$=$\int_{0}^{1} \frac{t^{x-1}}{(1-t)^{y-1}} dt$ \} 
+        \end{itemize}
+        
+        \newpage
+        \item \textbf{Seventh Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR7
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Difficult
+            \item\textbf{Description = } If we want to include negative values we can do that by including Image of a specific negative number.
+            \item\textbf{Rationale = } $x<0$ and $y<0$
+        \end{itemize}
+        \item \textbf{Eighth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR8
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } There should be no other inputs other than the numeric values.
+            \item\textbf{Rationale = }$ x,y \in R^+$
+        \end{itemize}
+
+        \item \textbf{Ninth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR9
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The two input variables can have similar as well as distinct values.
+            \item\textbf{Rationale = } $x=y$ or $x\neq y$
+        \end{itemize}
+    \end{enumerate}
+\section*{Assumptions}
+    \begin{enumerate}[noitemsep]
+        \item x and y are positive real numbers $x,y \in R^+$
+        \item For $x,y \in Z^+$ its easier to compute $B(x,y)$
+        \item There is no requirement for functions to calculate $B(x,y)$.
+
+    \end{enumerate}
+    
+    \begin{center}
+        \Large\textbf{\underline{Algorithm-1}}
+    \end{center}
+
+
+Stirling's approximation (or Stirling's formula) is an approximation for factorials. It is a good approximation, leading to accurate results even for small values of n. \\
+The sterling's approximation equation is represented as:\\
+
+$B(x,y)=\frac{\Gamma x \Gamma y}{\Gamma (x+y)}$\\
+\newline
+$\Gamma x = \sqrt{\frac{2 \pi}{x}}(\frac{x}{e})^x$\\
+
+\textbf{Advantages:}
+\begin{itemize}
+    \item The algorithm has a domain for all the positive real numbers.
+    \item The algorithm can compute most of the values available.
+    \item The algorithm acts as an approximation for the integration function.
+    \item Reduces the complexity of an integration code.
+\end{itemize}
+
+
+\textbf{Disadvantages:}
+\begin{itemize}
+    \item The algorithm cannot give accurate results.
+    \item Though the complexity is reduced, but its much more complex compared to the later algorithm.
+    \item Debugging the code is a bit difficult.
+    \item For smaller values the difference between the actual answer and the required answer is quite different. But, as the size of numbers increase the difference becomes less.
+\end{itemize}
+
+
+\begin{algorithm}
+\caption{Calculate Beta Function using Simpson's approximation}
+
+\textbf{Require:}  value: $x > 0$ \& $y>0$  \Comment{where $x,y \in \mathcal{R}^+$}\\
+\textbf{Ensure:} $result = Beta(x,y)$
+\begin{algorithmic}[1]
+
+\Procedure {CalculateSquareRoot}{$value$}
+    \State $squareroot \leftarrow math.sqrt(value)$
+    \State \textbf{return} $squareroot$\Comment{It returns the squareroot}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculatePower}{$value1$,$value2$}
+    \State $power \leftarrow math.power(value1,value2)$
+    \State \textbf{return} $power$\Comment{It returns the base to the power}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculateGamma}{$value$}
+    \State $value2 \leftarrow (\frac{value}{e})^{value}$
+    \State $gamma \leftarrow \Call{CalculaeSquareRoot}{value} \Call{CalculatePower}{value,value2}$
+    \State \textbf{return} $gamma$\Comment{It returns the gamma value}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculateBeta}{$x, y$}
+    \State $value1 \leftarrow \Call{CalculateGamma}{x}$
+    \State $value2 \leftarrow \Call{CalculateGamma}{y}$
+    \State $z \leftarrow x+y$
+    \State $value3 \leftarrow \Call{CalculateGamma}{z}$
+    \State $beta \leftarrow \frac{value1 * value2}{value3}$
+    \State \textbf{return} $beta$\Comment{It returns the beta value}
+    \EndProcedure
+\Statex
+
+
+
+\State $result \leftarrow \Call{CalculateBeta}{x,y} $\Comment{Final result of $Beta(x,y)$}
+
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+
+\Large\textbf{PROBLEM-3}\hfill\textbf{ROHAN DEEPAK PASPALLU}\\
+\textbf{Topic: $B(x,y)$}\hfill\textbf{40093648}
+\begin{center}
+        \Large\textbf{\underline{Algorithm-2
+        }}
+    \end{center}
+
+Beta function makes the use of gamma function to perform the computation of the positive integers
+\newline
+$B(x,y)=\frac{\Gamma x \Gamma y}{\Gamma (x+y)}$\\
+\newline
+$\Gamma x = (x-1)!$\\
+\textbf{Advantages:}
+\begin{itemize}
+    \item The algorithm gives the most accurate answers.
+    \item The algorithm is easier to implement and debug.
+    \item The execution takes place faster.
+    \item Performs better functionality for the Beta function
+\end{itemize}
+
+
+\textbf{Disadvantages:}
+\begin{itemize}
+    \item The algorithm can only be implemented for positive numbers.
+    \item The values fed to the algorithm can only be positive integers.
+    \item The algorithm doesn't consider integer values.
+\end{itemize}
+\begin{algorithm}
+\caption{Calculate Beta Function using factorial}
+
+\textbf{Require:}  value: $x > 0$ \& $y>0$  \Comment{where $x,y \in \mathcal{Z}^+$}\\
+\textbf{Ensure:} $result = Beta(x,y)$
+\begin{algorithmic}[1]
+
+\Procedure {CalculateFactorial}{$value$}
+    \State $value2 \leftarrow value-1$
+    \If{$value2 \neq 1 $}
+    \State $fact \leftarrow \Call{CalculateFactorial}{value2}$
+    \State \textbf{return} $fact$\Comment{It returns the factorial}
+    \Else
+    \State \textbf{return} $1$
+    \EndIf
+    \EndProcedure
+\Statex
+
+
+\Procedure {CalculateGamma}{$value$}
+    \State $value2 \leftarrow value-1$
+    \State $gamma \leftarrow \Call{CalculateFactorial}{value2}$
+    \State \textbf{return} $gamma$\Comment{It returns the gamma value}
+    \EndProcedure
+\Statex
+
+\Procedure {CalculateBeta}{$x, y$}
+    \State $value1 \leftarrow \Call{CalculateGamma}{x}$
+    \State $value2 \leftarrow \Call{CalculateGamma}{y}$
+    \State $z \leftarrow x+y$
+    \State $value3 \leftarrow \Call{CalculateGamma}{z}$
+    \State $beta \leftarrow \frac{value1 * value2}{value3}$
+    \State \textbf{return} $beta$\Comment{It returns the beta value}
+    \EndProcedure
+\Statex
+
+
+
+\State $result \leftarrow \Call{CalculateBeta}{x,y} $\Comment{Final result of $Beta(x,y)$}
+
+\end{algorithmic}
+\end{algorithm}
+
+    
 \begin{thebibliography}{9}
-\bibitem{wiki}
+% \bibitem{wiki}
 % https://en.wikipedia.org/wiki/Beta_function
-\url{https://en.wikipedia.org/wiki/Beta\_function}
+\url{https://en.wikipedia.org/wiki/Beta\_function}\\
+\url{https://en.wikipedia.org/wiki/Stirling\%27s\_approximation}\\
+\url{https://coderanch.com/t/686997/java/Trapezoidal-Rule-implementation-Java}
+
 \end{thebibliography}
     
     
